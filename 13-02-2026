@@ -1,0 +1,6 @@
+arr = ["tea","bat","tab","tan","eat","ate"]
+d = {}
+for i in arr:
+    d.setdefault(''.join(sorted(i)), []).append(i)
+
+print(*d.values(), sep=",")
