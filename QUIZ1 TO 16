@@ -1,0 +1,131 @@
+#1.1  print(1 + 2 + 3 + 4 + 5)
+#2
+# Sum of odd numbers from 1 to 100
+
+N = 1
+S = 0
+
+while N <= 100:
+    S = S + N
+    N = N + 2
+
+print("Sum of odd numbers from 1 to 100 is:", S)
+#2.2
+print("Enter an integer:")
+n = int(input())
+
+if n % 2 == 0:
+    print("n is even")
+else:
+    print("n is odd")
+#3.1
+n = 5
+print('* ' * n)
+print('# ' * n)
+#4.1
+name = "Tushar Kumar"
+address = "Gurgaon, Haryana, India"
+
+print("Name:", name)
+print("Address:", address)
+#5.1
+x = 1
+y = 0
+print(x and y)
+print(x or y)
+print(not x)
+print(not y)
+#6.1
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+if a < b:
+    print(a, b)
+else:
+    print(b, a)
+#7.1
+answer = int(input("Enter 0 or 1: "))
+
+if answer == 0:
+    print("You entered 0")
+elif answer == 1:
+    print("You entered 1")
+else:
+    print("Invalid input")
+#8.1
+for num in range(2, 13):
+    for i in range(2, num):
+        if num % i == 0:
+            print(num, "is Composite")
+            break
+    else:
+        print(num, "is Prime")
+#9.1
+for num in range(100, 1000):
+    sum = 0
+    temp = num
+    while temp > 0:
+        digit = temp % 10
+        sum += digit ** 3
+        temp //= 10
+    if num == sum:
+        print(num)
+#10.1
+l1 = ['A', 'B', 'C']
+l2 = ['1', '2', '3']
+
+for i in l1:
+    for j in l2:
+        print(i + j)
+#11.1
+person = {'Mother': 'Jane Doe', 'Brother': 'Jack Doe'}
+
+person['Father'] = 'John Doe'
+
+print(person)
+#12.1
+lst = [5,6,3,9,2,12,3,8,7]
+max_index = 0
+
+for i in range(len(lst)):
+    if lst[i] > lst[max_index]:
+        max_index = i
+
+lst[max_index], lst[-1] = lst[-1], lst[max_index]
+
+print(lst)
+#13.1
+a = [[1, 2], [3, 4], [5, 6]]
+new_list = []
+
+for row in a:
+    for item in row:
+        new_list.append(item)
+
+print(new_list)
+#14.1
+maria = {'korean': 90, 'english': 85, 'math': 92, 'science': 90}
+
+avg = sum(maria.values()) / len(maria)
+
+print("Average:", avg)
+#15.1
+import copy
+
+school = {'class1': {'student1': 90}}
+school2 = copy.deepcopy(school)
+
+print(school is school2)
+#16.1
+scores = (
+    ('Hyun', 88, 95, 90),
+    ('Min', 92, 90, 85),
+    ('Jin', 85, 88, 91),
+    ('Soo', 90, 93, 89)
+)
+
+names, english, math, science = zip(*scores)
+
+avg_math = sum(math) / len(math)
+
+print("Average Math Score:", avg_math)
