@@ -1,0 +1,17 @@
+import math
+
+# 1. Material Estimation
+t = float(input("Tiles needed: "))
+print(math.ceil(t), math.floor(t))
+
+# 2. Structural Calculations
+a = float(input("Area: "))
+s = float(input("Side: "))
+print(math.sqrt(a), s**3)
+
+# 3. Geometry
+r = float(input("Radius: "))
+print(2 * math.pi * r)
+
+# 4. Angle Conversion
+print(math.radians(45))
