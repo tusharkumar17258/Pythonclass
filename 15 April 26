@@ -1,0 +1,30 @@
+# 2. import re, math, random, sys, pickle
+
+# 1. Validation
+sensor_id = input("Enter Sensor ID (e.g., SENSOR-123): ")
+if not re.match(r"^SENSOR-\d{3}$", sensor_id):
+    print("Invalid Sensor ID!")
+    exit()
+
+# 2. Analysis
+radius = float(input("Enter radius: "))
+area = math.pi * radius**2
+
+# 3. Simulation
+temperature = random.uniform(20, 40)
+
+# 4. Environment
+platform = sys.platform
+
+# 5. Storage
+data = {
+    "Sensor ID": sensor_id,
+    "Area": area,
+    "Temperature": temperature,
+    "Platform": platform
+}
+
+with open("data_logger.pkl", "wb") as f:
+    pickle.dump(data, f)
+
+print("Data saved successfully!")
